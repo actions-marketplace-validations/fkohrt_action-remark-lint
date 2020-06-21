@@ -11,5 +11,5 @@ if [ "${INPUT_REPORTER}" = 'github-pr-review' ]; then
 else
   # github-pr-check,github-check (GitHub Check API) doesn't support markdown annotation.
   remark --quiet --use=remark-preset-lint-recommended . 2>&1 |
-    reviewdog -efm="%f\n%l:%c: %m" -name="remark-lint" -reporter="${INPUT_REPORTER:-github-pr-check}" -level="${INPUT_LEVEL}" -filter-mode=nofilter
+    reviewdog -efm="%f\n%l:%c: %m" -name="remark-lint" -reporter="${INPUT_REPORTER:-github-pr-check}" -level="${INPUT_LEVEL}" -fail-on-error="${INPUT_FAIL_ON_ERROR}" -filter-mode="${INPUT_FILTER_MODE}"
 fi

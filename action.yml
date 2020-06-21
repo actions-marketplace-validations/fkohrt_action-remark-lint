@@ -1,4 +1,4 @@
-name: 'Run remark-lint with reviewdog'
+name: 'Run remark-lint with reviewdog in nofilter mode'
 description: '🐶 Run remark-lint with reviewdog on pull requests to improve code review experience.'
 author: 'prologic'
 inputs:

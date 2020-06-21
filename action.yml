@@ -8,12 +8,18 @@ inputs:
   level:
     description: 'Report level for reviewdog [info,warning,error]'
     default: 'error'
+  fail_on_error:
+    description: 'Reviewdog exits with 1 when at least one error was found/reported'
+    default: 'false'
   reporter:
     description: |
       Reporter of reviewdog command [github-pr-check,github-pr-review,github-check].
       Default is github-pr-check.
       github-pr-review can use Markdown and add a link to rule page in reviewdog reports.
     default: 'github-pr-check'
+  filter_mode:
+    description: 'Control how reviewdog filters results [added,diff_context,file,nofilter]'
+    default: 'added'
 runs:
   using: 'docker'
   image: 'Dockerfile'
